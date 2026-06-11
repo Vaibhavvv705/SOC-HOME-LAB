@@ -346,3 +346,45 @@ SOC analysts monitor web logs to identify:
 
 Source IP observed:
 192.168.1.7 (Kali Linux)
+
+PHASE 8 – SSH FAILED LOGIN DETECTION
+
+Objective:
+Detect failed SSH login attempts.
+
+Monitoring Command:
+
+sudo journalctl -f
+
+Attack Simulation:
+
+From Kali:
+
+ssh vaibhav@192.168.1.2
+
+Entered incorrect password three times.
+
+Observed Events:
+
+Failed password for vaibhav
+Failed password for vaibhav
+Failed password for vaibhav
+Connection closed by authenticating user
+
+Source IP:
+192.168.1.7
+
+Target:
+192.168.1.2
+
+Learning:
+
+SOC analysts monitor authentication logs to detect:
+
+- Brute force attacks
+- Password guessing attempts
+- Unauthorized access attempts
+- Insider threats
+
+Result:
+Successfully detected SSH authentication failures.

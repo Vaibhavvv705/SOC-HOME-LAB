@@ -252,3 +252,36 @@ SSH is commonly used by SOC Analysts to:
 
 ---
 
+PHASE 5 – WEB SERVER ENUMERATION & MONITORING
+
+Objective:
+Install Apache web server on Ubuntu and monitor traffic from Kali.
+
+Commands Used:
+
+Ubuntu:
+sudo apt update
+sudo apt install apache2 -y
+sudo systemctl status apache2
+hostname -I
+
+Kali:
+nmap 192.168.1.2
+nmap -sV 192.168.1.2
+
+Wireshark Filter:
+http
+
+Observations:
+- Apache web server installed successfully.
+- Ubuntu hosted a webpage.
+- Kali accessed the webpage.
+- Nmap detected HTTP service.
+- Wireshark captured HTTP GET requests.
+- Server responded with HTTP 200 OK.
+
+Learning:
+- Web servers communicate using HTTP.
+- Nmap can identify running services.
+- Wireshark can capture web traffic.
+- SOC analysts monitor HTTP activity to detect suspicious behavior.

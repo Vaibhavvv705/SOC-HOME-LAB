@@ -157,3 +157,98 @@ Ping uses ICMP.
 Nmap identifies open ports and services.
 SSH allows secure remote administration.
 
+# SOC Home Lab - Phase 4: SSH Remote Access
+
+## Objective
+Establish secure remote access from Kali Linux to Ubuntu Server using SSH.
+
+## Lab Environment
+
+| Machine | Role | IP Address |
+|----------|----------|----------|
+| Kali Linux | Analyst/Client | 192.168.1.7 |
+| Ubuntu Server | Target/Server | 192.168.1.2 |
+
+## Tools Used
+
+- Kali Linux
+- Ubuntu Server
+- OpenSSH Server
+- VirtualBox
+
+## Commands Executed
+
+### Verify Ubuntu IP
+
+```bash
+ip a
+```
+
+### Verify SSH Service
+
+```bash
+sudo systemctl status ssh
+```
+
+### Verify Port 22
+
+```bash
+sudo ss -tuln | grep 22
+```
+
+### Test Connectivity
+
+```bash
+ping 192.168.1.2
+```
+
+### SSH Login
+
+```bash
+ssh vaibhav@192.168.1.2
+```
+
+## Findings
+
+- SSH service was running successfully.
+- Port 22 was listening.
+- Kali Linux successfully connected to Ubuntu Server.
+- Encrypted remote session established.
+
+## Challenges
+
+- Initial SSH connection returned "Connection Refused".
+- VM networking was misconfigured.
+- Resolved by placing both VMs on the same network and confirming SSH service status.
+
+## Security Concepts Learned
+
+- Secure Shell (SSH)
+- Remote Administration
+- Port 22 Enumeration
+- Client-Server Communication
+- Network Troubleshooting
+
+## SOC Relevance
+
+SSH is commonly used by SOC Analysts to:
+
+- Access Linux servers remotely
+- Investigate incidents
+- Collect logs
+- Perform system administration
+- Conduct forensic analysis
+
+## Outcome
+
+✅ Successfully established SSH connectivity between Kali Linux and Ubuntu Server.
+
+## Screenshots
+
+1. Ubuntu IP Address
+2. SSH Service Running
+3. Port 22 Listening
+4. Successful SSH Login
+
+---
+

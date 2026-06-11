@@ -285,3 +285,64 @@ Learning:
 - Nmap can identify running services.
 - Wireshark can capture web traffic.
 - SOC analysts monitor HTTP activity to detect suspicious behavior.
+
+PHASE 6 – AUTHENTICATION LOG MONITORING
+
+Objective:
+Monitor SSH authentication events in Ubuntu.
+
+Commands:
+
+sudo journalctl -f
+
+ssh vaibhav@192.168.1.2
+
+Observations:
+
+- SSH login generated log entries.
+- Source IP address was recorded.
+- Username was recorded.
+- Successful login displayed:
+  "Accepted password for vaibhav"
+
+Learning:
+
+SOC analysts monitor authentication logs to detect:
+- Successful logins
+- Failed logins
+- Unauthorized access attempts
+
+PHASE 7 – WEB SERVER LOG MONITORING
+
+Objective:
+Monitor Apache web server access logs.
+
+Commands:
+
+sudo tail -f /var/log/apache2/access.log
+
+Traffic Generation:
+
+From Kali:
+http://192.168.1.2
+
+Observed Events:
+
+GET / HTTP/1.1 200
+GET /icons/ubuntu-logo.png 200
+GET /favicon.ico 404
+
+Learning:
+
+200 = Request Successful
+404 = File Not Found
+
+SOC analysts monitor web logs to identify:
+
+- User activity
+- Suspicious requests
+- Web attacks
+- Unauthorized access attempts
+
+Source IP observed:
+192.168.1.7 (Kali Linux)

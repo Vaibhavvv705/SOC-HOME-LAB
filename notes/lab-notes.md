@@ -39,3 +39,16 @@ Commands Practiced:
 - git add
 - git commit
 - git push
+
+## Wireshark Investigation 1
+
+Filter Used:
+icmp
+
+Observed:
+- Echo Request packets
+- Echo Reply packets
+- Successful communication with google.com
+
+Skill Learned:
+Basic packet capture and analysis

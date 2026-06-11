@@ -108,3 +108,52 @@ sudo nmap -O 10.0.2.15
 
 Purpose:
 Identify operating system.
+
+# Phase 3 - Host Discovery & Enumeration
+
+Target: Ubuntu Server
+IP Address: 10.0.2.15
+
+Tools Used:
+- ping
+- Nmap
+
+Commands:
+
+ping 10.0.2.15
+
+nmap -Pn 10.0.2.15
+
+nmap -sV -Pn 10.0.2.15
+
+Objective:
+Discover live hosts and identify running services.
+
+# Phase 3 - Nmap Enumeration
+
+Target: Ubuntu Server
+IP: 10.0.2.15
+
+## Host Discovery
+
+ping 10.0.2.15
+
+Result:
+Host reachable
+
+## Service Enumeration
+
+nmap -Pn -p 22 10.0.2.15
+
+nmap -sV -Pn -p 22 10.0.2.15
+
+Result:
+Port 22 open
+SSH service detected
+
+## Learning
+
+Ping uses ICMP.
+Nmap identifies open ports and services.
+SSH allows secure remote administration.
+

@@ -388,3 +388,81 @@ SOC analysts monitor authentication logs to detect:
 
 Result:
 Successfully detected SSH authentication failures.
+
+# Phase 9 – Wazuh SIEM Fundamentals
+
+## Objective
+
+Understand the architecture and workflow of the Wazuh Security Information and Event Management (SIEM) platform.
+
+## Components Studied
+
+### Wazuh Agent
+Installed on endpoints to collect:
+
+- Authentication logs
+- System logs
+- Security events
+- File integrity data
+
+### Wazuh Manager
+
+Responsible for:
+
+- Receiving agent data
+- Processing events
+- Correlating security alerts
+- Applying detection rules
+
+### Wazuh Dashboard
+
+Used to:
+
+- Visualize alerts
+- Investigate incidents
+- Monitor endpoints
+- Review security events
+
+## SIEM Workflow
+
+Endpoint Activity
+↓
+Wazuh Agent
+↓
+Wazuh Manager
+↓
+Wazuh Dashboard
+↓
+SOC Analyst Investigation
+
+## Events Identified for Monitoring
+
+- Successful SSH logins
+- Failed SSH logins
+- Brute-force attempts
+- Apache web requests
+- System authentication events
+- Network reconnaissance activity
+
+## Learning Outcomes
+
+- SIEM architecture
+- Agent-to-manager communication
+- Centralized log management
+- Threat detection concepts
+- Security event monitoring
+- SOC analyst workflow
+
+## SOC Relevance
+
+Wazuh enables analysts to:
+
+- Detect suspicious activity
+- Monitor authentication events
+- Investigate incidents
+- Correlate security logs
+- Improve security visibility
+
+## Outcome
+
+Successfully studied Wazuh architecture and its role within a Security Operations Center (SOC) environment.
